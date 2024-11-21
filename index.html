@@ -1,1 +1,114 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style/landpage.css">
+    <title>Midterm Lab Enrollment System</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="image/logo.PNG" alt="Midterm Lab Logo">
+                <span class="logo-text">Midterm Lab Enrollment</span>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn btn-enroll">Enroll Now</button>
+                <button class="btn btn-help">Help</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="main-content">
+            <div>
+                <img src="image/banner.jpg" alt="Enrollment Banner" class="banner-image">
+            </div>
+            <div class="content-text">
+                <h2>Start Your Academic Journey</h2>
+                <p>Join our CVSU Campus for innovative learning platform. Easy enrollment, comprehensive courses, and a supportive academic environment await you.</p>
+                
+                <form id="enrollmentForm" class="enrollment-form">
+                    <div class="form-group">
+                        <label for="email">Institutional Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your institutional email" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Verify Email & Continue</button>
+                </form>
+            </div>
+        </section>
+
+    <section class="features">
+        <h2 class="features-title">Why Choose Midterm Lab?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature-title">Secure Enrollment</h3>
+                <p>Sample Statement for Secure Enrollment</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="feature-title">Comprehensive Courses</h3>
+                <p>Sample Statement for Comprehensive Courses</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Community Support</h3>
+                <p>Sample Statement for Community Support</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Midterm Lab Enrollment</h4>
+                <p>Sample Statement For Footer</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: itec116@midtermlab.edu</p>
+                <p>Phone: 123-456-789</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; Midterm Lab Enrollment System. All Rights Reserved 2024.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            // Basic email validation
+            if (!email.includes('@')) {
+                alert('Please enter a valid institutional email address.');
+                return;
+            }
+            
+            alert(`Email verification initiated for ${email}. Please check your inbox for further instructions.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
